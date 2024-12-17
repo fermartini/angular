@@ -1,0 +1,32 @@
+<app-header/>
+<div class="center">
+    <div id="contenido">
+      <div class="Productos">
+        <h1>Productos de:</h1>
+        <div id="listProductos">
+          <article
+            class="item-prod"
+            id="article-template"
+            *ngFor="let prod of product"
+          >
+            <div class="image-wrap">
+              <img src="../../../../assets/producto.png" alt="comida" />
+            </div>
+            <h2>{{ prod.nombre }}</h2>
+            <div class="cont-spanProd">
+              <span class="span-cardProd">Descripcion:</span><br />
+            </div>
+            <span class="precio-prod">Precio: {{ prod.fecha_vencimiento }}</span
+            ><br />
+            <span class="stock-prod">Stock: {{ prod.fecha_vencimiento }}</span><br />
+            <span
+              ><b>- Categoria: {{ prod.categoria_id }}</b></span
+            >
+            <button (click)="eliminarProducto(prod.id)" style="background-color:red">Eliminar</button>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<app-footer/>

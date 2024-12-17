@@ -1,0 +1,25 @@
+<app-header />
+<app-slider />
+<div id="home">
+    <div class="center">
+        <div id="contenido">
+            <h1 class="subheader">{{globalText.categoryHome}}</h1>
+            <div id="listCards">
+                <div class="colLista">
+                  <div class="cardd" *ngFor="let category of categories">
+                    <div>
+                      <img src="../../../../assets/image/categoria.jpg" alt="comida" />
+                    </div>
+                    <div class="contenidooo">
+                      <h3>{{category.nombre}}</h3>
+                      <button (click)="navegateProducts(category)">
+                        {{globalText.viewProducts}}
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+<app-footer />
